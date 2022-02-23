@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+.EN {display: none;}
+
+
+
+/* MOBILE */
+@media (orientation: portrait){
+
+    figure {
+    width: 100vw;
+    height: auto;
+    }
+    #fotoGabi {
+    width: 100vw;
+    height: auto;
+    }
+    header {
+        position: fixed;
+        width: 100vw;
+        height: 4vh;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    h3 {
+        font-size: 3rem;       
+    }
+
+    nav {
+    width: 100vw;
+    height: 25vh;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 75vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    }
+
+    h1 {
+        font-size: 3rem;       
+        padding: 1rem;
+        align-self: center;
+    }
+    .menu1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 0.2rem darkslategrey solid;
+        flex-direction: row;
+    }
+
+}
