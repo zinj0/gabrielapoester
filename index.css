@@ -15,6 +15,7 @@ body {
     #fotoGabi {
     width: 100vw;
     height: auto;
+    image-resolution: 72dpi
     }
     header {
         position: fixed;
