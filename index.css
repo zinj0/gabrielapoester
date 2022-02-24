@@ -14,15 +14,18 @@ body {
     height: auto;
     }
     #fotoGabi {
-    margin-top: 4%;
-    width: 100vw;
-    height: auto;
+    position: fixed;
+    top: 4vh;
+    min-width: 100vw;
+    max-width: 120vw;
+    min-height: 75vh;
     image-resolution: 72dpi
     }
     header {
         position: fixed;
         width: 100vw;
-        height: 4%;
+        height: 4vh;
+        top: 0px;
         background-color: whitesmoke;
         display: flex;
         align-items: center;
@@ -30,31 +33,35 @@ body {
         flex-direction: row;
     }
     h3 {
-        font-size: 3rem;       
+        font-size: 1em;       
     }
 
-    nav {
-    width: 100vw;
-    height: 25%;
-    background-color: whitesmoke;
-    position: absolute;
-    top: 75vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    }
 
-    h1 {
-        font-size: 3rem;       
-        padding: 1rem;
-        align-self: center;
-    }
-    .menu1 {
+
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 6vh;
+
         display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top: 0.2rem darkslategrey solid;
-        flex-direction: row;
+        flex-flow: column nowrap;
+        
+
+        border-top: 0.1rem darkslategray solid;
+        background-color: whitesmoke;
     }
+    .txt {
+        margin-top: 0.8vh;
+        margin-left: 20%;
+        margin-bottom: 0px;
+        font-size: 6vw;
+    }
+    .mais {
+        position: absolute;
+        left: 70vw;
+    }
+    #trabalhos{top: 76%;}#sobre{top: 82%; height: 18vh;}
+    #contato{top: 88%; height: 18vh;}#lang{top: 94%;}
+    
 
 }
