@@ -14,6 +14,7 @@ body {
     height: auto;
     }
     #fotoGabi {
+    margin-top: 4%;
     width: 100vw;
     height: auto;
     image-resolution: 72dpi
@@ -21,7 +22,7 @@ body {
     header {
         position: fixed;
         width: 100vw;
-        height: 4vh;
+        height: 4%;
         background-color: whitesmoke;
         display: flex;
         align-items: center;
@@ -34,7 +35,7 @@ body {
 
     nav {
     width: 100vw;
-    height: 25vh;
+    height: 25%;
     background-color: whitesmoke;
     position: absolute;
     top: 75vh;
