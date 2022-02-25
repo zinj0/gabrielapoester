@@ -1,8 +1,21 @@
 body {
     margin: 0;
     overflow-y: hidden;
+    background-color: whitesmoke;
 }
-.EN {display: none;}
+.en {
+    display: none;
+}
+.pt {
+    display: block;
+}
+#btnPt {
+    color: greenyellow;
+}
+
+h1, h2, h3, h4, h5 {
+     font-family:'Bebas Neue', cursive;
+}
 
 
 
@@ -15,7 +28,7 @@ body {
     }
     #fotoGabi {
     position: fixed;
-    top: 4vh;
+    top: 6vh;
     min-width: 100vw;
     max-width: 120vw;
     min-height: 75vh;
@@ -24,7 +37,7 @@ body {
     header {
         position: fixed;
         width: 100vw;
-        height: 4vh;
+        height: 6vh;
         top: 0px;
         background-color: whitesmoke;
         display: flex;
@@ -33,7 +46,8 @@ body {
         flex-direction: row;
     }
     h3 {
-        font-size: 1em;       
+        font-size: 1.5em;
+        margin: 0px;       
     }
 
 
@@ -52,13 +66,14 @@ body {
     }
     .txt {
         margin-top: 0.8vh;
-        margin-left: 20%;
+        margin-left: 35%;
         margin-bottom: 0px;
-        font-size: 6vw;
+        font-size: 7vw;
     }
     .mais {
         position: absolute;
-        left: 70vw;
+        top: 5%;
+        left: 65vw;
     }
     #trabalhos{top: 76%;}#sobre{top: 82%; height: 18vh;}
     #contato{top: 88%; height: 18vh;}#lang{top: 94%;}
