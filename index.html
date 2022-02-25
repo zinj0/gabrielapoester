@@ -7,10 +7,11 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
     <!-- CSS file -->
-    <link rel="stylesheet" href="https://unpkg.com/css-scrollbar-side/dist/index.css">
     <link rel="stylesheet" href="index.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 </head>
 
@@ -22,16 +23,16 @@
 
 <nav>
     <div id="trabalhos" class="menu">
-        <h1 class="txt">trabalhos<span class="mais">+</span></h1>
+        <h1 class="txt"><span class="pt">trabalhos</span><span class="en">works</span><span class="mais">+</span></h1>
     </div>
-    <div id="sobre" class="menu" onclick="fSobre()">
-        <h1 class="txt" >sobre<span class="mais">+</span></h1>
+    <div id="sobre" class="menu fechado" onclick="fSobre()">
+        <h1 class="txt" ><span class="pt">sobre</span><span class="en">about</span><span class="mais">+</span></h1>
     </div>
     <div id="contato" class="menu fechado" onclick="fContato()">
-        <h1 class="txt">contato<span class="mais">+</span></h1>
+        <h1 class="txt"><span class="pt">contato</span><span class="en">contact</span><span class="mais">+</span></h1>
     </div>
     <div id="lang" class="menu">
-        <h1 class="txt langBtn">PT   /   EN</h1>
+        <h1 class="txt langBtn"><span id="btnPt" onclick="ptBtn()">pt</span>   /   <span id="btnEn" onclick="enBtn()">en</span></h1>
     </div>
 </nav>
 
@@ -41,14 +42,32 @@
     let boxContato = document.getElementById('contato');
     let boxSobre = document.getElementById('sobre');
 
+
+//ABRIR E FECHAR MENU CONTATO
     function fContato(){
-        if(boxContato.classList.contains('fechado')){
+        // TUDO FECHADO
+        if(boxContato.classList.contains('fechado') && boxSobre.classList.contains('fechado')){
             gsap.to('#contato', {top: "76%", duration: 0.3, ease: "easeIn"});
             gsap.to('#trabalhos',{top: "64%", duration: 0.3, ease: "easeIn"});
             gsap.to('#sobre', {top: "70%", duration: 0.3, ease: "easeIn"});
             boxContato.classList.remove('fechado');
-            // boxContato.classList.add('aberto');
+            boxContato.classList.add('aberto');
+
+            boxSobre.classList.remove('aberto');
+            boxSobre.classList.add('fechado');
         }
+        // CASO UM MENU JÁ ESTEJA ABERTO
+        else if(boxContato.classList.contains('fechado') && boxSobre.classList.contains('aberto')){
+            gsap.to('#contato', {top: "76%", duration: 0.3, ease: "easeIn"});
+            gsap.to('#trabalhos',{top: "64%", duration: 0.3, ease: "easeIn"});
+            gsap.to('#sobre', {top: "70%", duration: 0.3, ease: "easeIn"});
+            boxContato.classList.remove('fechado');
+            boxContato.classList.add('aberto');
+
+            boxSobre.classList.remove('aberto');
+            boxSobre.classList.add('fechado');
+        }
+        // RETORNO
         else{
             gsap.to('#contato', {top: "88%", duration: 0.3, ease: "easeIn"});
             gsap.to('#trabalhos',{top: "76%", duration: 0.3, ease: "easeIn"});
@@ -57,14 +76,30 @@
             boxContato.classList.add('fechado');
         }
         }
-
+//ABRIR E FECHAR MENU SOBRE
     function fSobre(){
-        if(boxSobre.classList.contains('fechado')){
+        // TUDO FECHADO
+        if(boxSobre.classList.contains('fechado') & boxContato.classList.contains('fechado')){
             gsap.to('#trabalhos',{top: "64%", duration: 0.3, ease: "easeIn"});
             gsap.to('#sobre', {top: "70%", duration: 0.3, ease: "easeIn"});
             boxSobre.classList.remove('fechado');
-            // boxContato.classList.add('aberto');
+            boxSobre.classList.add('aberto');
+
+            boxContato.classList.remove('aberto');
+            boxContato.classList.add('fechado');
         }
+        // CASO UM MENU JÁ ESTEJA ABERTO
+        else if(boxSobre.classList.contains('fechado') & boxContato.classList.contains('aberto')){
+            gsap.to('#contato', {top: "88%", duration: 0.3, ease: "easeIn"});
+            gsap.to('#trabalhos',{top: "64%", duration: 0.3, ease: "easeIn"});
+            gsap.to('#sobre', {top: "70%", duration: 0.3, ease: "easeIn"});
+            boxSobre.classList.remove('fechado');
+            boxSobre.classList.add('aberto');
+
+            boxContato.classList.remove('aberto');
+            boxContato.classList.add('fechado');
+        }
+        // RETORNO
         else{
             gsap.to('#trabalhos',{top: "76%", duration: 0.3, ease: "easeIn"});
             gsap.to('#sobre', {top: "82%", duration: 0.3, ease: "easeIn"});
@@ -72,7 +107,23 @@
             boxSobre.classList.add('fechado');
         }
         }
-
+</script>
+<script>
+    let btnPt = document.getElementById('btnPt');
+    let btnEn = document.getElementById('btnEn');
+// TROCA DE IDIOMA
+    function enBtn(){
+        $('.pt').hide();
+        $('.en').show();
+        btnEn.style.color = 'limegreen';
+        btnPt.style.color = 'black';
+    }
+    function ptBtn(){
+        $('.pt').show();
+        $('.en').hide();
+        btnPt.style.color = 'limegreen';
+        btnEn.style.color = 'black';
+    }
     
 </script>
 </html>
