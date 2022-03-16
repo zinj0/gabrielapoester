@@ -3,6 +3,14 @@ body {
     overflow-y: hidden;
     background-color: whitesmoke;
 }
+a {
+    color: black;
+    text-decoration:none;
+}
+a:active {
+    color: limegreen;
+}
+
 .en {
     display: none;
 }
@@ -10,24 +18,29 @@ body {
     display: block;
 }
 #btnPt {
-    color: greenyellow;
+    color: limegreen;
 }
 
 h1, h2, h3, h4, h5 {
      font-family:'Bebas Neue', cursive;
 }
-
-
+p {
+    margin-top: 0.3em;
+}
+#trabalhosContainer {
+    display:contents;
+}
 
 /* MOBILE */
 @media (orientation: portrait){
 
-    figure {
+    #figurePg1 {
     width: 100vw;
     height: auto;
     }
     #fotoGabi {
     position: fixed;
+    left: 0px;
     top: 6vh;
     min-width: 100vw;
     max-width: 120vw;
@@ -46,12 +59,9 @@ h1, h2, h3, h4, h5 {
         flex-direction: row;
     }
     h3 {
-        font-size: 1.5em;
+        font-size: 1.8em;
         margin: 0px;       
     }
-
-
-
     .menu {
         position: fixed;
         width: 100vw;
@@ -65,18 +75,157 @@ h1, h2, h3, h4, h5 {
         background-color: whitesmoke;
     }
     .txt {
-        margin-top: 0.8vh;
+        margin-top: 1vh;
         margin-left: 35%;
         margin-bottom: 0px;
-        font-size: 7vw;
+        font-size: 7.3vw;
     }
     .mais {
         position: absolute;
         top: 5%;
         left: 65vw;
+        font-size: 8.4vw;
     }
     #trabalhos{top: 76%;}#sobre{top: 82%; height: 18vh;}
     #contato{top: 88%; height: 18vh;}#lang{top: 94%;}
-    
 
+    #email {
+        margin-left: 9vw;
+        font-size: 5vw;
+        font-weight: 400;
+        color: black;
+    }
+
+/* PG2 */
+
+#body2 {
+    display: flex;
+    flex-flow: column nowrap;
 }
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+    #cabecalho2 {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+
+        position: static;
+        width: 100vw;
+        height: 6vh;
+        top: 0px;
+        background-color: whitesmoke;
+    }
+
+    /* FILTROS */
+
+    #filtros {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+
+        
+        width: 100vw;
+        height: 6vh;
+        top: 6vh;
+        background-color: whitesmoke;
+    }
+
+    #filtros2 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        width: 100vw;
+        height: 6vh;
+        top: 12vh;
+        background-color: whitesmoke;
+    }
+
+
+
+
+
+
+
+    .trab {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: whitesmoke;
+        border-bottom: 2px black solid;
+        border-top: 2px black solid;
+        margin-top: -2px;
+
+        
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+
+        transition: all 0.3 linear;
+        
+    }
+
+    .mais2 {
+        position: absolute;
+        left: 90vw;
+        margin: 0px;
+    }
+
+    .anoBox {
+        width: 100vw;
+        background-color: whitesmoke;
+        /* border-bottom: 2px black solid; */
+        
+        margin: 0px;
+    }
+
+    .anoH {
+        margin: 0px;
+        margin-left: 90vw;
+        margin-top: 4vw;
+        font-size: 5vw;
+    }
+
+    .categoria {
+        margin-top: 2vw;
+        position: absolute;
+        right: 20vw;
+        margin: 0px;
+        font-size: 4.5vw;
+    }
+    .ativo {
+        color: limegreen;
+    }
+
+    .tituloTrab {
+        margin: 0px;
+        margin-left: 3.5vh;
+    } 
+
+    /* .primeiroTrab {
+        border-top: 2px black solid;
+        padding-top: 1.5%;
+    } */
+    
+    /* PARTE OCULTA */
+
+    .aberto {
+        height: 120vw !important;
+        transition: height 0.3s;    }
+    .fechado {
+        height: 7.5vw !important;
+        transition: height 0.3s;
+    }
+
+    .imgTrabalhos {
+        width: 80vw;
+        margin-top: 3vw;
+        margin-left: 6vw;
+    }
+    .imgDescTrabalhos {
+        width: 90vw;
+        margin-left: 6vw;
+    }
+
+    }
