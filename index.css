@@ -65,7 +65,7 @@ p {
     .menu {
         position: fixed;
         width: 100vw;
-        height: 6vh;
+        height: 10vh;
 
         display: flex;
         flex-flow: column nowrap;
@@ -162,7 +162,7 @@ p {
         padding-top: 1.5vw;
         padding-bottom: 1.5vw;
 
-        transition: all 0.3 linear;
+        transition: all 0.3s ease;
         
     }
 
@@ -210,12 +210,12 @@ p {
     
     /* PARTE OCULTA */
 
-    .aberto {
+    .aberto2 {
         height: 120vw !important;
-        transition: height 0.3s;    }
-    .fechado {
+        transition: all 0.3s ease !important;    }
+    .fechado2 {
         height: 7.5vw !important;
-        transition: height 0.3s;
+        transition: all 0.3s ease !important;
     }
 
     .imgTrabalhos {
