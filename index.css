@@ -37,7 +37,7 @@ p {
   figure {
       margin: 0;
       width: 100vw;
-      height: 70vh;
+      height: 70%;
     }
     #fotoGabi {
     width: 100%;
@@ -48,7 +48,7 @@ p {
 
   header {
     width: 100vw;
-    height: 6vh;
+    height: 6%;
     background-color: whitesmoke;
     border-bottom: 2px darkslategray solid;
     display: flex;
@@ -69,7 +69,7 @@ p {
   }
   .menu {
     width: 100vw;
-    height: 6vh;
+    height: 6%;
     display: flex;
     border-top: 2px darkslategray solid;
     background-color: whitesmoke;
