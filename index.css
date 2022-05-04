@@ -40,7 +40,7 @@ p {
       height: 70%;
     }
     #fotoGabi {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     image-resolution: 72dpi;
@@ -62,14 +62,14 @@ p {
 
   #menuBox {
       position: absolute;
-      top: 74vh;
+      top: 74%;
       z-index: 2;
       height: 36vh;
       background-color: whitesmoke;
   }
   .menu {
     width: 100vw;
-    height: 6%;
+    height: 6vh;
     display: flex;
     border-top: 2px darkslategray solid;
     background-color: whitesmoke;
