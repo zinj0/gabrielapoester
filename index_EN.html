@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br, en">
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="pt-BR">
+    <title>Gabriela Poester</title>
+    <meta name="description" content="Portfólio profissional da artista Gabriela Poester.">
+    <meta name="robots" content="all">
+    <meta name="author" content="Gustavo Nunes">
+    <meta name="keywords" content="atriz, diretora, teatro, cinema, porto alegre, gabriela poester">
+
+    <meta property="og:type" content="page">
+    <meta property="og:url" content="www.gabrielapoester.com">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Portfólio profissional da artista Gabriela Poester.">
+
+    <meta property="article:author" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:description" content="Portfólio profissional da artista Gabriela Poester.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body id="pg1body">
+
+<!-- CABEÇALHO      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+<header id="cabecalho"><h3>gabriela poester</h3></header>
+
+<!-- FIGURE     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<figure><img id="fotoGabi" src="IMAGENS/gabi3mobile.jpg" alt="Retrato atriz e diretora Gabriela Poester"></figure>
+
+<!-- MENU       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+<nav id="menuBox">
+    <a id="atNav" href="atuação.html" class="menu">
+        <h1 class="txt"><span class="pt">atuação</span><span class="en">acting</span></h1>
+    </a>
+
+    <a id="drNav" href="direção.html" class="menu">
+        <h1 class="txt" ><span class="pt">direção</span><span class="en">directing</span></h1>
+    </a>
+
+    <div id="sobre" class="menu" onclick="sobreabrir()">
+        <h1 class="txt"><span class="pt">sobre</span><span class="en">about</span></h1>
+    </div>
+
+    <div id="lang" class="menu">
+        <h1 class="txt langBtn"><span id="btnPt" onclick="ptBtn()">pt</span>   /   <span id="btnEn" onclick="enBtn()">en</span></h1>
+    </div>
+</nav>
+
+<div id="sobrebox" class="fechado">
+    <p id="sobretxt">
+        <span class="pt">TEXTO PORTUGUES Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </span>
+        <span class="en">TEXTO INGLES Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </span>
+    </p>
+</div>
+
+
+<!-- REDES SOCIAIS      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<section id="redes">
+    <a href="https://www.instagram.com/gabrielapoester/" target="_blank">
+        <img id="insta" class="icones" src="IMAGENS/iconeInsta.svg" alt=" ">
+    </a>
+    <a href="mailto:gabrielapoester@gmail.com "  target="_blank">
+    <img id="mail" class="icones" src="IMAGENS/iconeEmail.svg" alt=" ">
+    </a>
+</section>
+</body>
+
+
+
+<!-- SCRIPTS       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+
+
+// ABRIR BOX SOBRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    function sobreabrir(){
+        if ($('#sobrebox').hasClass('fechado')){
+            $('#sobrebox').removeClass('fechado').addClass('sobreaberto');
+            $('#sobre').addClass('ativo')
+            $('#redes').addClass('redesfechado');
+        }
+        else {$('#sobrebox').removeClass('sobreaberto').addClass('fechado');
+        $('#sobre').removeClass('ativo')
+        $('#redes').removeClass('redesfechado')};
+    }
+
+    let btnPt = document.getElementById('btnPt');
+    let btnEn = document.getElementById('btnEn');
+    $('.pt').hide();
+    $('#btnEn').css("color","limegreen");
+    $("#atNav").attr("href", "acting.html")
+    $("#drNav").attr("href", "directing.html")
+
+// TROCA DE IDIOMA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
+    function enBtn(){
+        $('.pt').hide();
+        $('.en').show();
+        btnEn.style.color = 'limegreen';
+        btnPt.style.color = 'black';
+
+        $("#atNav").attr("href", "acting.html")
+        $("#drNav").attr("href", "directing.html")
+    }
+    function ptBtn(){
+        $('.pt').show();
+        $('.en').hide();
+        btnPt.style.color = 'limegreen';
+        btnEn.style.color = 'black';
+
+        $("#atNav").attr("href", "atuação.html")
+        $("#drNav").attr("href", "direção.html")
+        
+    }
+    
+
+
+
+</script>
+</html>

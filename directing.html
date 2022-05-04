@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br, en">
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="pt-BR">
+    <title>Gabriela Poester  |  DIREÇÃO</title>
+    <meta name="description" content="Portfólio profissional da artista Gabriela Poester.">
+    <meta name="robots" content="all">
+    <meta name="author" content="Gustavo Nunes">
+    <meta name="keywords" content="atriz, diretora, teatro, cinema, porto alegre, gabriela poester">
+
+    <meta property="og:type" content="page">
+    <meta property="og:url" content="www.gabrielapoester.com">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Portfólio profissional da artista Gabriela Poester.">
+
+    <meta property="article:author" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:description" content="Portfólio profissional da artista Gabriela Poester.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="trabalhos.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+<header class="cabeca">
+    <a id="retorno" href="index_EN.html"><h3> < </h3></a>
+    <h3><span class="pt">direção</span><span class="en">directing</span></h3>
+    <h3 class="langBtn"><span id="btnPt" onclick="ptBtn()">pt</span>   /   <span id="btnEn" onclick="enBtn()">en</span></h3>
+</header>
+<!-- TRABALHOS -->
+<div id="trabalhosContainer">
+
+<a class="trab dir serie primeiro">
+    <h1 class="trabh1">LÚCIDA</h1>
+    <span class="pt cat">série</span><span class="en cat">series</span>
+    <h1 class="data">2022</h1>
+</a>
+
+<a class="trab dir teatro">
+    <h1 class="trabh1">A ÚLTIMA PEÇA</h1>
+    <span class="pt cat">teatro</span><span class="en cat">theater</span>
+    <h1 class="data">2019</h1>
+</a>
+
+<a class="trab dir teatro">
+    <h1 class="trabh1">FILHAS DA MEMÓRIA</h1>
+    <span class="pt cat">teatro</span><span class="en cat">theater</span>
+    <h1 class="data">2018</h1>
+</a>
+
+<a class="trab dir teatro">
+    <h1 class="trabh1">ASSUNTO:</h1>
+    <span class="pt cat">teatro</span><span class="en cat">theater</span>
+    <h1 class="data">2015</h1>
+</a>
+
+<a class="trab dir teatro">
+    <h1 class="trabh1">MOSCAS</h1>
+    <span class="pt cat">teatro</span><span class="en cat">theater</span>
+    <h1 class="data">2015</h1>
+</a>
+
+<a class="trab dir teatro">
+    <h1 class="trabh1">ESCONDERIJO</h1>
+    <span class="pt cat">teatro</span><span class="en cat">theater</span>
+    <h1 class="data">2013</h1>
+</a>
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+    let btnPt = document.getElementById('btnPt');
+    let btnEn = document.getElementById('btnEn');
+    $('.pt').hide();
+    $('#btnEn').css("color","limegreen");
+// TROCA DE IDIOMA
+    function enBtn(){
+        $('.pt').hide();
+        $('.en').show();
+        btnEn.style.color = 'limegreen';
+        btnPt.style.color = 'black';
+
+        $("#retorno").attr("href", "index_EN.html")
+    }
+    function ptBtn(){
+        $('.pt').show();
+        $('.en').hide();
+        btnPt.style.color = 'limegreen';
+        btnEn.style.color = 'black';
+
+        $("#retorno").attr("href", "index.html")
+    }
+
+    // ABRINDO TRABALHOS
+
+function abrir() {
+    if($(event.currentTarget).hasClass('fechado2'))
+        {   
+            $('.aberto').removeClass('aberto', 400, 'ease').addClass('fechado2', 400, 'ease');
+            $(event.currentTarget).removeClass('fechado2', 400, 'ease').addClass('aberto', 400, 'ease');
+    }
+    else { $(event.currentTarget).removeClass('aberto', 400, 'ease').addClass('fechado2', 400, "ease")}
+
+}
+
+
+    
+</script>
+</html>
