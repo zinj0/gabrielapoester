@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    background-color: whitesmoke;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:active {
+    color: limegreen;
+  }
+
+
+  h1,
+  h2,
+  h4,
+  h5 {
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-size: 7vw;
+  }
+  h3 {
+    font-size: 7vw;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0;
+    font-weight: 100;
+  }
+  p {
+    margin-top: 0.3em;
+  }
+
+  #trabalhosContainer {
+    margin-top: 16vh;
+  }
+
+/* MOBILE */
+@media (orientation: portrait){
+
+.cabeca {
+        width: 100vw;
+        height: 7vh;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+}
+
+  nav {
+    position: fixed;
+    top: 6.8vh;
+  }
+
+#filtros {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;   
+    width: 100vw;
+    height: 6vh;
+    top: 6vh;
+    background-color: whitesmoke;
+    }
+
+.hFiltros {
+  font-family: "BIZ UDPMincho";
+  font-weight: 600;
+  font-size: 5vw;
+  padding-top: 1.5vw;
+}
+
+    .primeiro {
+        border-top: 2px black solid
+    }
+
+    .trab {
+        display: flex;
+        padding-left: 2%;
+        align-items: center;  
+        border-bottom: 2px black solid;
+        height: 6vh;
+    }
+
+    .trabh1 {
+        width: 60%;
+        height: auto;
+        white-space: nowrap
+    }
+
+    .data {
+        padding-left: 5%;
+    }
+
+    .cat {
+        font-family: monospace;
+        font-size: 5vw;
+        font-weight: 500;
+        width: 22%;
+        height: auto;
+        text-align: right;
+
+        transition: opacity 300ms linear;
+    }
+
+    .ativo {
+        color: limegreen;
+    }
+    .ativoFiltro {
+      color: limegreen;
+      font-style: italic;
+  }
+
+
+
+/* TRABALHOS ABERTOS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.telaAberta {
+  position: absolute;
+  top: 6vh;
+  left: 100vw;
+  width: 100%;
+  min-height: 100%;
+  background-color: whitesmoke;
+  transition: all 300ms linear;
+
+  z-index: 2;
+}
+#cabeca2 {
+  height: auto;
+  justify-content: flex-start;
+  margin-left: 2.3vw;
+}
+#hAberto {
+  font-size: 20vw;
+  margin-left: 2.5vw;
+}
+.subtituloAberto {
+  background-color: black;
+  color: whitesmoke;
+  font-size: 4vw;
+  margin-top: -2.5vh;
+  font-family: "Bebas Neue";
+  text-align: right;
+}
+.subtituloAberto p {
+  margin-top: 0.8vh;
+  margin-right: 10vw;
+}
+.sub1 {
+  animation: letreiro1 40s linear infinite;
+}
+.slides {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 2.5vw;
+}
+.imgTrabs {
+  display: inline-block;
+  width: auto;
+  max-height: 40vh; 
+  margin-left: 5vw;
+}
+.primeiraImg {
+  margin-left: 0vw;
+}
+figcaption {
+  padding: 5%;
+  font-family: monospace;
+  font-weight: 300;
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 5%;
+  overflow-y: scroll;
+}
+}
